@@ -604,6 +604,7 @@ a.pure-button-selected {
     display: flex;
     justify-content: space-between;
     padding: 5px;
+    z-index: 100;
 }
 .topbar h1{
     color: #fff;
@@ -699,9 +700,11 @@ a.pure-button-selected {
     }
 }
 .content{
-    padding: 50px;
+    padding: 50px 0;
     color: #3c231b;
     background-color: #eee6e7;
+    text-align: center;
+
 }
 .footer{
     background-color: lightsalmon;
@@ -754,7 +757,247 @@ a.pure-button-selected {
 }
 
 /* layout end */
+/* index css start */
+.homeTitle{
+    position: relative;
+}
+.homeTitle h3{
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.homeTitle:before,.homeTitle:after{
+    display: inline-block;
+    content: '';
+    width: 20%;
+    height: 1px;
+    background-color: #a09f9f;
+    position: absolute;
+    top:45%;
+}
+.homeTitle:before{
+    right: 51%;
+    margin-right: 100px;
+}
+.homeTitle:after{
+    left: 51%;
+    margin-left: 100px;
+}
+@media(max-width:320px){
+    .homeTitle:before,.homeTitle:after{
+    display: none;
+    }
+}
+.features{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+.features li{
+    margin: 1%;
+    width: 31.3333%;
+    padding: 10px;
+}
+.features h4{
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.features p{
+    text-align: start;
+    line-height: 1.5;
+}
+.features .moreFeatures{
+    display: none;
+}
+@media(max-width:768px){
+    .features .moreFeatures{
+        display: block;
+    }
+    .features li{
+        width: 48%;
+    }
+}
+@media(max-width:568px){
+    .features .moreFeatures{
+        display: none;
+    }
+    .features li{
+        width: 98%;
+    }
+}
+.chef{
+    background: #3d1101;
+    display: flex;
+    color: #fff;
+    padding: 0 3%;
+    flex-wrap: wrap;
+}
+.chef img{
+    height: 460px;
+    width: 50%;
+}
+.chef .smallPhoto{
+    display: none;
+}
+.chef .brief{
+    text-align: start;
+    line-height: 1.5;
+    padding: 30px;
+    width: 50%;
+}
+.chef h4{
+    font-size: 20px;
+    padding-top: 65px;
+}
+.chef p{
+    padding-bottom: 25px;
+}
+@media(max-width:786px){
+    .chef img{
+        width: 100%;
+        height: auto;
+    }
+    .chef .brief{
+        width: 100%;
+    }
+}
+@media(max-width:568px){
+    .chef .bigPhoto{
+        display: none;
+    }
+    .chef .smallPhoto{
+        display: block;
+    }
+}
+.comment{
+    padding-bottom: 10px;
+}
+.comment h3{
+    font-size: 20px;
+    padding: 40px;
+    font-weight: bold;
+}
+.comment .user{
+    display: flex;
+    padding: 0 3%;
+    flex-wrap: wrap;
+}
+.comment .userID{
+    display: flex;
+}
+.comment li{
+    margin: 1%;
+    width: 31.3333%;
+}
+.userID img{
+    width: 20%;
+    height: 20%;
+}
+.userID h4{
+    padding: 20px;
+    font-weight: bold;
+}
+.user p{
+    text-align: start;
+    margin-left: 76px;
+    padding: 8px;
+}
+.user span{
+    padding-top: 18px;
+    text-align: end;
+    display: block;
+}
+.user .moreComment{
+    display: none;
+}
+@media(max-width:768px){
+    .comment li{
+        width: 48%;
+    }
+    .user .moreComment{
+        display: block;
+    }
+}
+@media(max-width:568px){
+    .comment li{
+        width: 98%;
+    }
+    .user .moreComment{
+        display: none;
+    }
+}
+.location{
+    background: #f6f4f3;
+    padding: 20px 3%;
+}
+.location h3{
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+.booking{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+.booking img{
+    width: 48%;
+    margin-right: 2%;  
+}
+.booking .smallMap{
+    display: none;
+}
+.booking .personalInfo{
+    width: 48%;
+    margin: 0 1%;
+    text-align: start;
+    position: relative;
+}
+#name,#tel,#email,#people{
+    margin-bottom: 15px;
+}
+.personalInfo .cancelBtn{
+    position: absolute;
+    bottom: 0;
+    right: 20%;
+    color: #fff;
+    background: #a09e9e;
+}
 
+.personalInfo .sendBtn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    background-color: #f56c23;
+}
+@media(max-width:768px){
+    .booking img{
+        width: 100%;
+        margin-right: 0;  
+    }
+    .booking .personalInfo{
+        width: 100%;
+        margin: 0 ;
+    }
+    .booking .personalInfo  .cancelBtn,.booking .personalInfo .sendBtn{
+        position: unset;
+        margin-top: 15px;
+    }
+}
+
+@media(max-width:320px){
+    .booking .bigMap{
+        display: none;
+    }
+    .booking .smallMap{
+        display: block;
+    }
+
+}
+/* index css end */
+/* login css start */
 .login{
     max-width: 360px;
     margin: 0 auto;
@@ -818,3 +1061,4 @@ a.pure-button-selected {
         width: 100%;
     }
 }
+/* login css end */
