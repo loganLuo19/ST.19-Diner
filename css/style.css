@@ -574,7 +574,6 @@ a.pure-button-selected {
 }
 .header{
     background-image: url(https://upload.cc/i1/2020/07/23/t3XxL7.jpg);
-    width: 100%;
     padding: 20%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -621,11 +620,12 @@ a.pure-button-selected {
     width: 30%;
 }
 .topbar .menu a{
+    display: block;
     text-decoration: none;
     color: #fff;
     font-size: 20px;
     padding: 5px 10px;
-    border-bottom: 2px  rgba(114, 47, 21, 0.8) ;
+    border-bottom: 2px double rgba(114, 47, 21, 0);
 }
 .topbar .menu a:hover{
     border-bottom: 2px double #fff;
@@ -676,7 +676,7 @@ a.pure-button-selected {
 
 }
 .showMenu .menu{
-    max-height: 140px;
+    max-height: 175px;
 }
 .banner{
     max-width: 450px;
@@ -732,6 +732,9 @@ a.pure-button-selected {
 .icon img {
     padding: 5px;
     max-width: 40px;
+}
+.icon a{
+    display: block;
 }
 @media(max-width:768px){
     .footer{
@@ -832,6 +835,7 @@ a.pure-button-selected {
     color: #fff;
     padding: 0 3%;
     flex-wrap: wrap;
+    align-items: center
 }
 .chef img{
     height: 460px;
@@ -843,7 +847,7 @@ a.pure-button-selected {
 .chef .brief{
     text-align: start;
     line-height: 1.5;
-    padding: 30px;
+    padding-left: 30px;
     width: 50%;
 }
 .chef h4{
@@ -954,7 +958,7 @@ a.pure-button-selected {
     text-align: start;
     position: relative;
 }
-#name,#tel,#email,#people{
+.name,.tel,.email,.people{
     margin-bottom: 15px;
 }
 .personalInfo .cancelBtn{
@@ -964,7 +968,9 @@ a.pure-button-selected {
     color: #fff;
     background: #a09e9e;
 }
-
+.personalInfo .cancelBtn:hover{
+    background-color: #3D1101;;
+}
 .personalInfo .sendBtn{
     position: absolute;
     bottom: 0;
